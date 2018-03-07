@@ -2,21 +2,21 @@ import json
 import sys, operator
 
 class TruthDiscovery():
-    
+
     def __init__(self, matrix):
-        
+
         self.matrix = matrix
         self.num_sources = len(matrix)
         self.num_measured_variables = self.calcTotNumMeasuredVariables()
-        
+
         self.a = self.initAi()
         self.b = self.initBi()
-        
+
         self.d = 0.5
-        
+
         self.Z = dict.fromkeys(range(1,self.num_measured_variables+2))
         self.H = dict.fromkeys(range(1,self.num_measured_variables+2))
-        self.E = dict.fromkeys(self.matrix.keys()) 
+        self.E = dict.fromkeys(self.matrix.keys())
 
     def numMeasuredVariables(self, source_id):
         return len(self.matrix[source_id])
@@ -107,7 +107,7 @@ class TruthDiscovery():
         for i in self.matrix:
             self.E[i] = self.calcSourceReliability(i)
 
-    def verifyTruth(self, ground_file):
+    def verify(self, ground_file):
         truth_dict = {}
         f = open(ground_file)
         for line in f:

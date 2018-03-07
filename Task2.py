@@ -31,4 +31,4 @@ def sensinMatrixDump(tweets, clusters, filename):
             data = str(user_id) + ',' + str(cluster) + '\n'
             f.write(data)
     f.close()
-    print('\nSensing Matrix successfully written to {}\n'.format(filename))
+    print('\nProbabilities successfully written to {}\n'.format(filename))

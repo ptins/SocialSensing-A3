@@ -47,4 +47,4 @@ from Task1 import TruthDiscovery
 
 td = TruthDiscovery(matrix)
 td.expectationMaximization()
-td.verifyTruth(GROUND_TRUTH_FILE)
+td.verify(GROUND_TRUTH_FILE)
