@@ -14,8 +14,10 @@ I developed this in Python 3.6.4.
 
 Edit the following lines in the code to change the GROUND_TRUTH_FILE and SENSING_MATRIX_FILE inputs.
 
-> GROUND_TRUTH_FILE = './GroundTruth_File'
-> SENSING_MATRIX_FILE = './SCMatrix_Test1'
+```
+GROUND_TRUTH_FILE = './GroundTruth_File'
+SENSING_MATRIX_FILE = './SCMatrix_Test1'
+```
 
 Run the following command to see your results.
 
@@ -28,10 +30,12 @@ python3 A3_task1.py
 
 Edit the following lines in the code to change the GROUND_TRUTH_FILE and SENSING_MATRIX_FILE inputs.
 
-> TWEETS_FILE = './Tweets.txt'
-> CLUSTERS_FILE = './Cluster_Results.txt'
-> SENSING_MATRIX_FILE = './SCMatrix_Task2'
-> OUTPUT_PROBS_FILE = './Task2_Probs.txt'
+```
+TWEETS_FILE = './Tweets.txt'
+CLUSTERS_FILE = './Cluster_Results.txt'
+SENSING_MATRIX_FILE = './SCMatrix_Task2'
+OUTPUT_PROBS_FILE = './Task2_Probs.txt'
+```
 
 Run the following command to see your results.
 
