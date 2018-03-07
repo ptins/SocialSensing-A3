@@ -22,7 +22,7 @@ SENSING_MATRIX_FILE = './SCMatrix_Test1'
 # In[3]:
 
 
-def readSensingMatrixFile(filename):
+def readSensingMatrix(filename):
     matrix = {}
     f = open(filename, 'r')
     for line in f:
@@ -57,8 +57,8 @@ tweets = loadJsonTwitter(TWEETS_FILE)
 clusters = loadClusterResults(CLUSTERS_FILE)
 sensinMatrixDump(tweets, clusters, SENSING_MATRIX_FILE)
 
-matrix = readSensingMatrixFile(SENSING_MATRIX_FILE)
+matrix = readSensingMatrix(SENSING_MATRIX_FILE)
 
 td = TruthDiscovery(matrix)
-td.expectationMaximization()
-td.dumpMeasuredVarProb(OUTPUT_PROBS_FILE)
+td.mle()
+td.writeProbs(OUTPUT_PROBS_FILE)

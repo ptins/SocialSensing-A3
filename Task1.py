@@ -85,7 +85,7 @@ class TruthDiscovery():
     def calcSourceReliability(self, s):
         return self.a[s] * self.d / float(self.calcSi(s))
 
-    def expectationMaximization(self):
+    def mle(self):
         t = 0
         while t < 20:
 
@@ -130,7 +130,7 @@ class TruthDiscovery():
             f.write(str(j) + ',' + str(self.H[j]) + '\n')
         f.close()
 
-    def dumpMeasuredVarProb(self, filename):
+    def writeProbs(self, filename):
         f = open(filename, 'w')
         for tup in sorted(self.Z.items(), key=operator.itemgetter(1), reverse=True):
             f.write(str(tup[0]) + ',' + str(tup[1]) + '\n')

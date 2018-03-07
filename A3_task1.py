@@ -22,7 +22,7 @@ SENSING_MATRIX_FILE = './SCMatrix_Test1'
 # In[3]:
 
 
-def readSensingMatrixFile(filename):
+def readSensingMatrix(filename):
     matrix = {}
     f = open(filename, 'r')
     for line in f:
@@ -37,7 +37,7 @@ def readSensingMatrixFile(filename):
 # In[4]:
 
 
-matrix = readSensingMatrixFile(SENSING_MATRIX_FILE)
+matrix = readSensingMatrix(SENSING_MATRIX_FILE)
 
 
 # In[5]:
@@ -46,5 +46,5 @@ matrix = readSensingMatrixFile(SENSING_MATRIX_FILE)
 from Task1 import TruthDiscovery
 
 td = TruthDiscovery(matrix)
-td.expectationMaximization()
+td.mle()
 td.verify(GROUND_TRUTH_FILE)
