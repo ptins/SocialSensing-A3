@@ -51,11 +51,11 @@ OUTPUT_PROBS_FILE = './Task2_Probs.txt'
 
 
 from Task1 import TruthDiscovery
-from Task2 import loadJsonTwitter, loadClusterResults, sensinMatrixDump
+from Task2 import loadJsonTwitter, loadClusterResults, writeSensMatrixFile
 
 tweets = loadJsonTwitter(TWEETS_FILE)
 clusters = loadClusterResults(CLUSTERS_FILE)
-sensinMatrixDump(tweets, clusters, SENSING_MATRIX_FILE)
+writeSensMatrixFile(tweets, clusters, SENSING_MATRIX_FILE)
 
 matrix = readSensingMatrix(SENSING_MATRIX_FILE)
 

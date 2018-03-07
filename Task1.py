@@ -135,3 +135,4 @@ class TruthDiscovery():
         for tup in sorted(self.Z.items(), key=operator.itemgetter(1), reverse=True):
             f.write(str(tup[0]) + ',' + str(tup[1]) + '\n')
         f.close()
+        print('\nSuccessfully wrote probabilities to {}\n'.format(filename))

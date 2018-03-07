@@ -20,7 +20,7 @@ def loadClusterResults(filename):
                 clusters[int(tweet_id)] = int(cluster_id)
     return clusters
 
-def sensinMatrixDump(tweets, clusters, filename):
+def writeSensMatrixFile(tweets, clusters, filename):
     f = open(filename, 'w')
     for user_id in tweets:
         measured_variables = []
@@ -31,4 +31,3 @@ def sensinMatrixDump(tweets, clusters, filename):
             data = str(user_id) + ',' + str(cluster) + '\n'
             f.write(data)
     f.close()
-    print('\nProbabilities successfully written to {}\n'.format(filename))
