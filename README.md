@@ -42,3 +42,11 @@ Run the following command to see your results.
 ```
 python3 A3_task2.py
 ```
+
+This code is also available as a Jupyter notebook, labeled A3.ipynb in the directory.
+
+Run the following command to open the notebook.
+
+```
+jupyter notebook A3.ipynb
+```
